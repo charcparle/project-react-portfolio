@@ -43,8 +43,8 @@
   .text-zone {
     position: absolute;
     left: 10%;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 30%;
+    transform: translateY(-10%);
     width: 35%;
     vertical-align: middle;
     display: table-cell;
@@ -61,27 +61,24 @@
       left: -10px;
 
       &:before {
-        content: '<h1>';
+        content: '"';
         font-family: 'La Belle Aurore', cursive;
         color: #ffd700;
-        font-size: 18px;
+        font-size: 40px;
         position: absolute;
-        margin-top: -10px;
-        left: -10px;
+        margin-top: 0px;
+        left: -15px;
         opacity: 0.6;
-        line-height: 18px;
       }
 
       &:after {
-        content: '<h1/>';
+        content: '"';
         font-family: 'La Belle Aurore', cursive;
         color: #ffd700;
-        font-size: 18px;
-        line-height: 18px;
+        font-size: 40px;
         position: absolute;
-        left: -30px;
-        bottom: -20px;
-        margin-left: 20px;
+        margin-top: 10px;
+        margin-left: 5px;
         opacity: 0.6;
       }
     }
