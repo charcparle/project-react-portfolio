@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import AnimatedLetters from './AnimatedLetters'
 function Home() {
-  const [letterClass, setLetterClass] = useState('text-animate')
+  const [letterClass, setLetterClass] = useState('')
   useEffect(() => {
+    setLetterClass('text-animate')
     return setTimeout(() => setLetterClass('text-animate-hover'), 5000)
   }, [])
   return (

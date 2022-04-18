@@ -1,19 +1,20 @@
 import './About.scss'
-import {
-  faAngular,
-  faCss3,
-  faGitAlt,
-  faHtml5,
-  faJsSquare,
-  faReact,
-} from '@fortawesome/free-brands-svg-icons'
+// import {
+//   faAngular,
+//   faCss3,
+//   faGitAlt,
+//   faHtml5,
+//   faJsSquare,
+//   faReact,
+// } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import AnimatedLetters from './AnimatedLetters'
 import { useState, useEffect } from 'react'
 import Loader from 'react-loaders'
 function About() {
-  const [letterClass, setLetterClass] = useState('text-animate')
+  const [letterClass, setLetterClass] = useState('')
   useEffect(() => {
+    setLetterClass('text-animate')
     return setTimeout(() => setLetterClass('text-animate-hover'), 5000)
   }, [])
   return (
@@ -42,8 +43,7 @@ function About() {
             :)
           </p>
         </div>
-
-        <div className="stage-cube-cont">
+        {/* <div className="stage-cube-cont">
           <div className="cubespinner">
             <div className="face1">
               <FontAwesomeIcon icon={faAngular} color="#DD0031" />
@@ -64,7 +64,7 @@ function About() {
               <FontAwesomeIcon icon={faGitAlt} color="#EC4D28" />
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
       <Loader type="pacman" />
     </>
