@@ -8,18 +8,24 @@ import {
   faReact,
 } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import AnimatedLetters from './AnimatedLetters'
+import { useState, useEffect } from 'react'
+import Loader from 'react-loaders'
 function About() {
+  const [letterClass, setLetterClass] = useState('text-animate')
+  useEffect(() => {
+    return setTimeout(() => setLetterClass('text-animate-hover'), 5000)
+  }, [])
   return (
     <>
       <div className="container about-page">
         <div className="text-zone">
           <h1>
-            {/* <AnimatedLetters
+            <AnimatedLetters
               letterClass={letterClass}
-              strArray={['A', 'b', 'o', 'u', 't', ' ', 'm', 'e']}
+              str={'About Me'}
               idx={15}
-            /> */}
-            About me
+            />
           </h1>
           <p>
             This is me. Always looking for how things work. Civil engineer,
@@ -60,6 +66,7 @@ function About() {
           </div>
         </div>
       </div>
+      <Loader type="pacman" />
     </>
   )
 }
