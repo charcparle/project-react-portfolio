@@ -5,10 +5,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faLinkedin,
   faGithub,
-  faYoutube,
-  faSkype,
+  // faYoutube,
+  // faSkype,
 } from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope, faHome, faUser } from '@fortawesome/free-solid-svg-icons'
+import {
+  faEnvelope,
+  faHome,
+  faUser,
+  faBriefcase,
+} from '@fortawesome/free-solid-svg-icons'
 function Sidebar() {
   return (
     <div className="nav-bar">
@@ -26,6 +31,14 @@ function Sidebar() {
           to="/about"
         >
           <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
+        </NavLink>
+        <NavLink
+          exact="true"
+          activeclassname="active"
+          className="projects-link"
+          to="/projects"
+        >
+          <FontAwesomeIcon icon={faBriefcase} color="#4d4d4e" />
         </NavLink>
         <NavLink
           exact="true"
