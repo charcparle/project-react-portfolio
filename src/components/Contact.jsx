@@ -3,6 +3,7 @@ import Loader from 'react-loaders'
 import AnimatedLetters from './AnimatedLetters'
 import './Contact.scss'
 import emailjs from '@emailjs/browser'
+import { MapContainer, TileLayer, useMap, Marker, Popup } from 'react-leaflet'
 function Contact() {
   const [letterClass, setLetterClass] = useState('')
   useEffect(() => {
@@ -12,15 +13,23 @@ function Contact() {
   const refForm = useRef()
   const handleSubmit = (e) => {
     e.preventDefault()
-    emailjs.sendForm('gmail_personal', 'contact_form', refForm.current,process.env.REACT_APP_EMAILJS_KEY).then(
-      function () {
-        console.log('SUCCESS!')
-      },
-      function (error) {
-        console.log('FAILED...', error)
-      }
-    )
-    console.log('Form submitted')
+    emailjs
+      .sendForm(
+        'gmail_personal',
+        'contact_form',
+        refForm.current,
+        process.env.REACT_APP_EMAILJS_KEY
+      )
+      .then(
+        () => {
+          alert('Message successfully sent!')
+          window.location.reload(false)
+        },
+        (error) => {
+          alert('Failed to send the message, please try again')
+          console.log(error)
+        }
+      )
   }
   return (
     <>
@@ -68,6 +77,31 @@ function Contact() {
               </ul>
             </form>
           </div>
+        </div>
+        <div className="info-map">
+          Charles Cheng,
+          <br />
+          Coquitlam, British Columbia <br />
+          Canada <br />
+          <br />
+          <span>charles.yhcheng@gmail.com</span>
+        </div>
+        <div className="map-wrap">
+          <MapContainer
+            center={[49.29, -122.79]}
+            zoom={11}
+            scrollWheelZoom={false}
+          >
+            <TileLayer
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+            <Marker position={[49.29, -122.79]}>
+              <Popup>
+                Charles Cheng. <br /> Let's hang out!
+              </Popup>
+            </Marker>
+          </MapContainer>
         </div>
       </div>
       <Loader type="pacman" />
