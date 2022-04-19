@@ -2,15 +2,24 @@ import { useState, useEffect, useRef } from 'react'
 import Loader from 'react-loaders'
 import AnimatedLetters from './AnimatedLetters'
 import './Contact.scss'
+import emailjs from '@emailjs/browser'
 function Contact() {
   const [letterClass, setLetterClass] = useState('')
   useEffect(() => {
     setLetterClass('text-animate')
     return setTimeout(() => setLetterClass('text-animate-hover'), 5000)
   }, [])
-  const form = useRef(null)
+  const refForm = useRef()
   const handleSubmit = (e) => {
     e.preventDefault()
+    emailjs.sendForm('gmail_personal', 'contact_form', refForm.current,process.env.REACT_APP_EMAILJS_KEY).then(
+      function () {
+        console.log('SUCCESS!')
+      },
+      function (error) {
+        console.log('FAILED...', error)
+      }
+    )
     console.log('Form submitted')
   }
   return (
@@ -29,12 +38,12 @@ function Contact() {
             projects to work on.
           </p>
           <div className="contact-form">
-            <form onSubmit={handleSubmit} ref={form}>
+            <form onSubmit={handleSubmit} ref={refForm}>
               <ul>
-                <li>
+                <li className="half">
                   <input type="text" name="name" placeholder="Name" required />
                 </li>
-                <li>
+                <li className="half">
                   <input
                     type="email"
                     name="email"
@@ -44,7 +53,7 @@ function Contact() {
                 </li>
                 <li>
                   <input
-                    type="Subject"
+                    type="text"
                     name="subject"
                     placeholder="Subject"
                     required
