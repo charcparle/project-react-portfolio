@@ -7,7 +7,7 @@ import './About.scss'
 //   faJsSquare,
 //   faReact,
 // } from '@fortawesome/free-brands-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import AnimatedLetters from './AnimatedLetters'
 import { useState, useEffect } from 'react'
 import Loader from 'react-loaders'

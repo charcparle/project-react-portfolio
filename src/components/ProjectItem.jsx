@@ -7,7 +7,7 @@ function ProjectItem({ projectName, stack, link }) {
     <div className="project-item">
       <h4>
         {projectName} &emsp;
-        <a href={link} target="_blank">
+        <a href={link} target="_blank" rel="noreferrer">
           <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
         </a>
       </h4>

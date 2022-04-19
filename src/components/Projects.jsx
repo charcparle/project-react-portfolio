@@ -1,9 +1,7 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import './Projects.scss'
 import AnimatedLetters from './AnimatedLetters'
 import ProjectItem from './ProjectItem'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 
 function Projects() {
   const [letterClass, setLetterClass] = useState('')
