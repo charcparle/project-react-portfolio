@@ -1,6 +1,6 @@
 import { Link, NavLink } from 'react-router-dom'
 import './Sidebar.scss'
-import LogoC from '../assets/images/clogo.png'
+import LogoC from '../assets/images/clogo3.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faLinkedin,
