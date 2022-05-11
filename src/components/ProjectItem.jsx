@@ -1,4 +1,4 @@
-import './Projects.scss'
+import '../pages/Projects.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 

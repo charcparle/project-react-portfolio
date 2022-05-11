@@ -1,7 +1,7 @@
 import './Home.scss'
 import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import AnimatedLetters from './AnimatedLetters'
+import AnimatedLetters from '../components/AnimatedLetters'
 function Home() {
   const [letterClass, setLetterClass] = useState('')
   useEffect(() => {

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import './Projects.scss'
-import AnimatedLetters from './AnimatedLetters'
-import ProjectItem from './ProjectItem'
+import AnimatedLetters from '../components/AnimatedLetters'
+import ProjectItem from '../components/ProjectItem'
 
 function Projects() {
   const [letterClass, setLetterClass] = useState('')

@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* https://coolors.co/palette/5f6d6f-22222f-1b1922-837f76-778196-100d16-2d425f-b6b2bb-2f476c-44546d */
+
 html {
   font-size: 62.5%;
 }
