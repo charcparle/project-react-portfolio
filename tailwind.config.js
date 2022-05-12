@@ -7,7 +7,11 @@ module.exports = {
       lg: "976px",
       xl: "1440px",
     },
-    extend: {},
+    extend: {
+      colors: {
+        paleGray: "hsl(267, 6, 72)"
+      },
+    },
   },
   plugins: [],
 }

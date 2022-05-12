@@ -1,8 +1,66 @@
-
+import { Link, useNavigate } from "react-router-dom"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons"
 function NavBar() {
+  const navigate = useNavigate()
   return (
-    <div className='flex relative bg-sky-400 w-full text-xl'>
-      <p className='text-center text-white'>NavBar</p>
+    <div className="flex relative bg-beige w-full text-xl justify-between">
+      <div className="justify-start">
+        <ul className="flex flex-row h-full p-2">
+          <li>
+            <a
+              href="https://www.linkedin.com/in/charles-yh-cheng/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FontAwesomeIcon icon={faLinkedin} className="mx-2 h-full"/>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/charcparle"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FontAwesomeIcon icon={faGithub} className="mx-2 h-full"/>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div className="flex justify-between">
+        <div className="p-2 m-2 hover:drop-shadow-md hover:cursor-pointer ">
+          <p
+            className="text-center text-gray-900 font-bold hover:text-gray-600 hover:decoration-wavy hover:underline"
+            onClick={() => navigate("/")}
+          >
+            Home
+          </p>
+        </div>
+        <div className="p-2 m-2 hover:drop-shadow-md hover:cursor-pointer">
+          <p
+            className="text-center text-gray-900 font-bold hover:text-gray-600 hover:decoration-wavy hover:underline"
+            onClick={() => navigate("/about")}
+          >
+            About
+          </p>
+        </div>
+        <div className="p-2 m-2 hover:drop-shadow-md hover:cursor-pointer">
+          <p
+            className="text-center text-gray-900 font-bold hover:text-gray-600 hover:decoration-wavy hover:underline"
+            onClick={() => navigate("/projects")}
+          >
+            Projects
+          </p>
+        </div>
+        <div className="p-2 m-2 hover:drop-shadow-md hover:cursor-pointer">
+          <p
+            className="text-center text-gray-900 font-bold hover:text-gray-600 hover:decoration-wavy hover:underline"
+            onClick={() => navigate("/contact")}
+          >
+            Contact
+          </p>
+        </div>
+      </div>
     </div>
   )
 }

@@ -11,7 +11,7 @@ function Home() {
   return (
     <>
       <div className="container home-page">
-        <div className="text-zone">
+        <div className="absolute w-4/5 m-20" id='textzone'>
           <h1>
             Hello there,
             <br />
