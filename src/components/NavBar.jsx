@@ -4,7 +4,7 @@ import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons"
 function NavBar() {
   const navigate = useNavigate()
   return (
-    <div className="flex relative bg-beige w-full text-xl justify-between">
+    <div className="flex relative bg-gray-300 w-full text-xl justify-between">
       <div className="justify-start">
         <ul className="flex flex-row h-full p-2">
           <li>
@@ -30,7 +30,7 @@ function NavBar() {
       <div className="flex justify-between">
         <div className="p-2 m-2 hover:drop-shadow-md hover:cursor-pointer ">
           <p
-            className="text-center text-gray-900 font-bold hover:text-gray-600 hover:decoration-wavy hover:underline"
+            className="text-center text-gray-900 font-bold hover:text-gray-600 hover:decoration-wavy hover:underline hover:underline-offset-4"
             onClick={() => navigate("/")}
           >
             Home
@@ -38,7 +38,7 @@ function NavBar() {
         </div>
         <div className="p-2 m-2 hover:drop-shadow-md hover:cursor-pointer">
           <p
-            className="text-center text-gray-900 font-bold hover:text-gray-600 hover:decoration-wavy hover:underline"
+            className="text-center text-gray-900 font-bold hover:text-gray-600 hover:decoration-wavy hover:underline hover:underline-offset-4"
             onClick={() => navigate("/about")}
           >
             About
@@ -46,7 +46,7 @@ function NavBar() {
         </div>
         <div className="p-2 m-2 hover:drop-shadow-md hover:cursor-pointer">
           <p
-            className="text-center text-gray-900 font-bold hover:text-gray-600 hover:decoration-wavy hover:underline"
+            className="text-center text-gray-900 font-bold hover:text-gray-600 hover:decoration-wavy hover:underline hover:underline-offset-4"
             onClick={() => navigate("/projects")}
           >
             Projects
@@ -54,7 +54,7 @@ function NavBar() {
         </div>
         <div className="p-2 m-2 hover:drop-shadow-md hover:cursor-pointer">
           <p
-            className="text-center text-gray-900 font-bold hover:text-gray-600 hover:decoration-wavy hover:underline"
+            className="text-center text-gray-900 font-bold hover:text-gray-600 hover:decoration-wavy hover:underline hover:underline-offset-4"
             onClick={() => navigate("/contact")}
           >
             Contact
