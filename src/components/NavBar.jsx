@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons"
 function NavBar() {
@@ -21,6 +21,7 @@ function NavBar() {
           >
             <FontAwesomeIcon icon={faGithub} className="mx-2 h-full" />
           </a>
+          <p>CHARLESCHENG.TECH</p>
         </div>
       </div>
       <div className="flex justify-between">
