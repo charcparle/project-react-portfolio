@@ -46,7 +46,7 @@ function Projects() {
           <ProjectItem
             projectName={"House Marketplace app"}
             stack={"React | Firebase"}
-            link={"https://charlesc-project-support-desk.herokuapp.com/"}
+            link={"https://project-house-marketplace-app.vercel.app/"}
           />
         </div>
       </div>
