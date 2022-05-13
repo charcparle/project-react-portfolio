@@ -88,7 +88,7 @@ function Contact() {
             </form>
           </div>
         </div>
-        <div className="absolute bg-black w-auto opacity-50 text-white text-2xl font-bold bottom-0 left-0">
+        <div className="fixed bg-black w-auto opacity-50 text-white text-2xl font-bold bottom-0 left-0">
           Charles Cheng,
           <br />
           Coquitlam, British Columbia <br />
@@ -96,7 +96,7 @@ function Contact() {
           <br />
           <span>charles.yhcheng@gmail.com</span>
         </div>
-        <div className="map-wrap z-0">
+        <div className="map-wrap grayscale-[50%]">
           <MapContainer
             center={[49.29, -122.79]}
             zoom={12}
