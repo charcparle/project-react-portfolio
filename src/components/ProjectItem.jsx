@@ -5,7 +5,7 @@ import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons"
 
 function ProjectItem({ projectName, stack, link }) {
   return (
-    <div className="project-item hover:bg-gray-400">
+    <div className="project-item w-4/5 hover:bg-gray-400">
       <a href={link} target="_blank" rel="noreferrer">
         <div className="project-title">
           <h4>{projectName} &emsp;</h4>

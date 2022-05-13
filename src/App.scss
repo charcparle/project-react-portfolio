@@ -90,7 +90,7 @@ textarea {
     }
   }
   .project-item {
-    width: 400px;
+    // width: 400px;
     animation: pulse 1s 1s;
     @for $i from 1 through 5 {
       &:nth-of-type(#{$i}) {
