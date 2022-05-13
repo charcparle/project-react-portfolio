@@ -9,7 +9,8 @@ module.exports = {
     // },
     extend: {
       colors: {
-        paleGray: "hsl(267, 6, 72)"
+        paleGray: "hsl(267, 6, 72)",
+        paleOrange: "#ffc000"
       },
     },
   },

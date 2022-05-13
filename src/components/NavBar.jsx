@@ -6,26 +6,22 @@ function NavBar() {
   return (
     <div className="flex relative bg-gray-300 w-full text-xl justify-between">
       <div className="justify-start">
-        <ul className="flex flex-row h-full p-2">
-          <li>
-            <a
-              href="https://www.linkedin.com/in/charles-yh-cheng/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FontAwesomeIcon icon={faLinkedin} className="mx-2 h-full"/>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://github.com/charcparle"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FontAwesomeIcon icon={faGithub} className="mx-2 h-full"/>
-            </a>
-          </li>
-        </ul>
+        <div className="flex flex-row justify-start h-full p-2">
+          <a
+            href="https://www.linkedin.com/in/charles-yh-cheng/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FontAwesomeIcon icon={faLinkedin} className="mx-2 h-full" />
+          </a>
+          <a
+            href="https://github.com/charcparle"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FontAwesomeIcon icon={faGithub} className="mx-2 h-full" />
+          </a>
+        </div>
       </div>
       <div className="flex justify-between">
         <div className="p-2 m-2 hover:drop-shadow-md hover:cursor-pointer ">

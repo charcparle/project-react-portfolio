@@ -38,7 +38,7 @@ function Home() {
   return (
     <>
       <div className="home-page h-full" ref={bgRef}>
-        <div className="absolute w-4/5 m-20" id="textzone">
+        <div className="absolute w-4/5 m-20 mt-36" id="textzone">
           <h1 className="text-gray-300 text-8xl drop-shadow-lg">
             Hello there,
             <br />

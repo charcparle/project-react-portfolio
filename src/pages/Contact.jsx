@@ -1,48 +1,58 @@
-import { useState, useEffect, useRef } from 'react'
-import Loader from 'react-loaders'
-import AnimatedLetters from '../components/AnimatedLetters'
-import './Contact.scss'
-import emailjs from '@emailjs/browser'
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import { useState, useEffect, useRef } from "react"
+import Loader from "react-loaders"
+import AnimatedLetters from "../components/AnimatedLetters"
+import "./Contact.scss"
+import emailjs from "@emailjs/browser"
+import {
+  MapContainer,
+  TileLayer,
+  SVGOverlay,
+  Marker,
+  Popup,
+} from "react-leaflet"
 function Contact() {
-  const [letterClass, setLetterClass] = useState('')
+  const [letterClass, setLetterClass] = useState("")
   useEffect(() => {
-    setLetterClass('text-animate')
-    return setTimeout(() => setLetterClass('text-animate-hover'), 5000)
+    setLetterClass("text-animate")
+    return setTimeout(() => setLetterClass("text-animate-hover"), 5000)
   }, [])
   const refForm = useRef()
+  const bounds = [
+    [49.3, -122.79],
+    [49.33, -122.72],
+  ]
   const handleSubmit = (e) => {
     e.preventDefault()
     emailjs
       .sendForm(
-        'gmail_personal',
-        'contact_form',
+        "gmail_personal",
+        "contact_form",
         refForm.current,
         process.env.REACT_APP_EMAILJS_KEY
       )
       .then(
         () => {
-          alert('Message successfully sent!')
+          alert("Message successfully sent!")
           window.location.reload(false)
         },
         (error) => {
-          alert('Failed to send the message, please try again')
+          alert("Failed to send the message, please try again")
           console.log(error)
         }
       )
   }
   return (
     <>
-      <div className="container contact-page">
-        <div className="text-zone">
+      <div className="contact-page h-full">
+        <div className="absolute w-4/5 m-20 mt-36">
           <h1>
             <AnimatedLetters
               letterClass={letterClass}
-              str={'Contact me'}
+              str={"Contact me"}
               idx={15}
             />
           </h1>
-          <p>
+          <p className="w-1/2">
             Feel free to contact me - I am constantly looking for exciting
             projects to work on.
           </p>
@@ -78,7 +88,7 @@ function Contact() {
             </form>
           </div>
         </div>
-        <div className="info-map">
+        <div className="absolute bg-black w-auto opacity-50 text-white text-2xl font-bold bottom-0 left-0">
           Charles Cheng,
           <br />
           Coquitlam, British Columbia <br />
@@ -86,10 +96,10 @@ function Contact() {
           <br />
           <span>charles.yhcheng@gmail.com</span>
         </div>
-        <div className="map-wrap">
+        <div className="map-wrap z-0">
           <MapContainer
             center={[49.29, -122.79]}
-            zoom={11}
+            zoom={12}
             scrollWheelZoom={false}
           >
             <TileLayer
@@ -104,7 +114,7 @@ function Contact() {
           </MapContainer>
         </div>
       </div>
-      <Loader type="pacman" />
+      <Loader type="line-scale-pulse-out-rapid" />
     </>
   )
 }
