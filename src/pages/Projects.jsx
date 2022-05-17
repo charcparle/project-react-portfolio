@@ -31,7 +31,7 @@ function Projects() {
           <ProjectItem
             projectName={"Sudoku Solver"}
             stack={"Node.js | Express"}
-            link={""}
+            link={"https://charles-sudoku-solver.herokuapp.com/"}
           />
           <ProjectItem
             projectName={"Exercise Tracker"}
