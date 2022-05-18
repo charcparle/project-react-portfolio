@@ -1,4 +1,4 @@
-import "./Home.scss"
+import "../App.scss"
 import { Link } from "react-router-dom"
 import { useEffect, useRef, useState } from "react"
 import WAVES from "vanta/dist/vanta.waves.min"

@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react"
 import Loader from "react-loaders"
 import AnimatedLetters from "../components/AnimatedLetters"
-import "./Contact.scss"
+import "../App.scss"
 import emailjs from "@emailjs/browser"
 import {
   MapContainer,

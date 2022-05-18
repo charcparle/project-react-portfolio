@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import "./Projects.scss"
+// import "./Projects.scss"
 import "./Layout.scss"
 import "../App.scss"
 import AnimatedLetters from "../components/AnimatedLetters"

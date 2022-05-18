@@ -3,7 +3,7 @@ import "../App.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons"
 
-function ProjectItem({ projectName, stack, link }) {
+function ProjectItem({ projectName, stack, link, desc }) {
   return (
     <div className="project-item w-4/5 hover:bg-gray-400">
       <a href={link} target="_blank" rel="noreferrer">
@@ -14,6 +14,7 @@ function ProjectItem({ projectName, stack, link }) {
           </button>
         </div>
         <h5>{stack}</h5>
+        <div className="text-white text-xl">{desc}</div>
       </a>
     </div>
   )
