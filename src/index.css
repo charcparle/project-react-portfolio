@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* https://coolors.co/palette/5f6d6f-22222f-1b1922-837f76-778196-100d16-2d425f-b6b2bb-2f476c-44546d */
+
 html {
   font-size: 62.5%;
 }
@@ -5,9 +10,9 @@ html {
 body {
   margin: 0;
   font: 300 11px/1.4 'Helvetica Neue', 'sans serif';
-  color: #444;
-  background-color: #022c43;
-  overflow: hidden;
+  color: #22222F;
+  background-color: #5F6D6F;
+  overflow: auto;
   display: block;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
