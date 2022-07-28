@@ -1,6 +1,6 @@
 import "./Layout.scss"
 import "../App.scss"
-import { useState, useEffect, useLayoutEffect } from "react"
+import { useState, useEffect } from "react"
 import AnimatedLetters from "../components/AnimatedLetters"
 import ProjectItem from "../components/ProjectItem"
 import Loader from "react-loaders"
@@ -50,11 +50,20 @@ function Projects() {
             projectName={"Sudoku Solver"}
             stack={"Node.js | Express"}
             link={"https://charles-sudoku-solver.herokuapp.com/"}
+            desc={
+              <ul>
+                <li>A REST API backend service for solving and validating sudoku puzzles. </li>
+                <li>
+                Users can send puzzle string to the end point to retrieve the solution. 
+                </li>
+                <li>The frontend is powered by React for demonstration.</li>
+              </ul>
+            }
           />
           <ProjectItem
             projectName={"Exercise Tracker"}
             stack={"Node.js | Express | MongoDB"}
-            link={""}
+            link={"https://github.com/charcparle/exercise-tracker"}
             desc={
               <ul>
                 <li>A REST API microservice project.</li>
@@ -75,6 +84,11 @@ function Projects() {
             projectName={"House Marketplace app"}
             stack={"React | Firebase"}
             link={"https://project-house-marketplace-app.vercel.app/"}
+          />
+          <ProjectItem
+            projectName={"Aircraft Design Research Project using MARILib "}
+            stack={"Python | Pandas | Plotly | MARILib"}
+            link={""}
           />
         </div>
       </div>
